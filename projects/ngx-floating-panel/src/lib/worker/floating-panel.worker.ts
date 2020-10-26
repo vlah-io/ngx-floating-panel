@@ -46,7 +46,7 @@ export class FloatingPanelWorker {
     }
 
     compRefInstance.subSink.add(
-      compRefInstance.dismiss.subscribe(
+      compRefInstance.dismiss$.subscribe(
         () => {
           this.factoryWorker.destroy(compRef);
         }

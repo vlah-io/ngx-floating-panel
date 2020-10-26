@@ -18,7 +18,7 @@ import {SubSink} from 'subsink';
 export class FloatingPanelComponent implements OnDestroy {
   subSink = new SubSink();
 
-  @Output() dismiss: EventEmitter<true> = new EventEmitter<true>();
+  @Output() dismiss$: EventEmitter<true> = new EventEmitter<true>();
   @ViewChild('container', {static: true}) container!: ElementRef;
 
   constructor(private renderer: Renderer2) {
@@ -37,14 +37,14 @@ export class FloatingPanelComponent implements OnDestroy {
   @HostListener('document:keyup', ['$event'])
   _handleKeyUpEvent(event: KeyboardEvent): void {
     if (event.key === 'Escape') {
-      this.dismiss$();
+      this.dismiss();
     }
   }
 
   // this.renderer.removeClass(document.body, 'g-n-sc');
   // this.renderer.addClass(document.body, 'g-n-sc');
-  dismiss$(): void {
-    this.dismiss.emit(true);
+  dismiss(): void {
+    this.dismiss$.emit(true);
   }
 
   ngOnDestroy(): void {
