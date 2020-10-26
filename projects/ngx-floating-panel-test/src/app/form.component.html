@@ -1,0 +1,170 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <h2 class="h2">Form Elements</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col box">
+      <form class="vlahio-form" [formGroup]="formWorker.form">
+        <div class="row">
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'Currency Input'"
+                     [required]="true"
+                     vlahioCurrencyInput
+                     [currencyCode]="'RON'"
+                     [formControlName]="'currency'">
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'EUR Currency Input'"
+                     [required]="true"
+                     vlahioCurrencyInput
+                     [currencyCode]="'EUR'"
+                     [formControlName]="'eur'">
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'USD Currency Input'"
+                     [required]="true"
+                     vlahioCurrencyInput
+                     [currencyCode]="'USD'"
+                     [formControlName]="'usd'">
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'GBP Currency Input'"
+                     [required]="true"
+                     vlahioCurrencyInput
+                     [currencyCode]="'GBP'"
+                     [formControlName]="'gbp'">
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <vlahio-date-input [label]="'Date Input'"
+                            [req]="true"
+                            [form]="formWorker.form"
+                            [controlName]="'date'"></vlahio-date-input>
+          </div>
+          <div class="col">
+            <label>
+              <input type="email"
+                     [vlahioWrapBootstrap]="'Email Input'"
+                     [required]="true"
+                     vlahioSelectOnFocus
+                     [attr.placeholder]="'Some placeholder'"
+                     [formControlName]="'email'">
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'Numeric Input'"
+                     [required]="true"
+                     vlahioNumericInput
+                     [stepper]="10"
+                     [formControlName]="'numeric'">
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'Numeric Input'"
+                     vlahioNumericInput
+                     [stepper]=".1"
+                     [formControlName]="'numeric2'">
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'Percentage Input'"
+                     vlahioPercentageInput
+                     [formControlName]="'percentage'">
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              <input type="text"
+                     [vlahioWrapBootstrap]="'Text Input'"
+                     [required]="true"
+                     vlahioSelectOnFocus
+                     [formControlName]="'text'">
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <vlahio-password-input [label]="'Password Input'"
+                                [req]="true"
+                                [form]="formWorker.form"
+                                [controlName]="'password'"></vlahio-password-input>
+          </div>
+          <div class="col">
+            <vlahio-password-input [label]="'Password Input Confirmation'"
+                                [req]="true"
+                                [form]="formWorker.form"
+                                [strengthBar]="false"
+                                [controlName]="'passwordConfirmation'"></vlahio-password-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <vlahio-fake-input [required]="true"
+                            [label]="'Fake Input'"
+                            [value]="'Some dummy value'"></vlahio-fake-input>
+          </div>
+          <div class="col">
+            <vlahio-fake-input [required]="true"
+                            [label]="'Read-Only Fake Input'"
+                            [value]="'256.35'"
+                            [textToTheRight]="true"
+                            [readonly]="true"></vlahio-fake-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>
+              <textarea [vlahioWrapBootstrap]="'Elastic Textarea'"
+                        [required]="true"
+                        vlahioTextareaAutosize
+                        [formControlName]="'elasticTextarea'"
+                        rows="3"></textarea>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col box">
+      <pre>{{formWorker.form.value | json}}</pre>
+    </div>
+  </div>
+</div>
+
+<div class="vlahio-form-submit-fixed vlahio-th-white">
+  <button type="button" class="btn" (click)="dismiss$($event)">Save</button>
+</div>

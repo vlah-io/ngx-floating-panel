@@ -1,0 +1,30 @@
+@import "variables";
+
+.vlahio-floating-panel {
+  .vlahio-container {
+    &.vlahio-right {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 40%;
+      border-left: $borderStyle;
+
+      @include forceFullScreen;
+
+      @include force20PercentOfTheScreen;
+
+      @include force30PercentOfTheScreen;
+
+      @include force40PercentOfTheScreen;
+
+      @include force50PercentOfTheScreen;
+
+      @include force75PercentOfTheScreen;
+
+      .vlahio-form-submit-fixed {
+        text-align: left;
+      }
+    }
+  }
+}

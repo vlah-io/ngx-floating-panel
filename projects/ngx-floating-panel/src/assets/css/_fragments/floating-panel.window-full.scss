@@ -1,0 +1,22 @@
+@import "variables";
+
+.vlahio-floating-panel {
+  .vlahio-container {
+    &.vlahio-full {
+      position: fixed;
+      top: 20px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      width: calc(100vw - 40px);
+      height: calc(100vh - 40px);
+      border: $borderStyle;
+
+      @include forceFullScreen;
+
+      .vlahio-form-submit-fixed {
+        text-align: center;
+      }
+    }
+  }
+}

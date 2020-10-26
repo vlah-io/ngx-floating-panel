@@ -1,0 +1,51 @@
+@mixin forceFullScreen {
+  @media (max-width: 540px) {
+    position: fixed !important;
+    top: 10px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+    width: calc(100vw - 20px) !important;
+    height: calc(100vh - 20px) !important;
+    border: $borderStyle !important;
+
+    .vlahio-form-submit-fixed {
+      text-align: right !important;
+    }
+  }
+}
+
+@mixin force75PercentOfTheScreen {
+  @media (min-width: 541px) and (max-width: 1024px) {
+    width: 75% !important;
+  }
+}
+
+@mixin force50PercentOfTheScreen {
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    width: 50% !important;
+  }
+}
+
+@mixin force40PercentOfTheScreen {
+  @media (min-width: 1281px) and (max-width: 2048px) {
+    width: 40% !important;
+  }
+}
+
+@mixin force30PercentOfTheScreen {
+  @media (min-width: 2049px) and (max-width: 2560px) {
+    width: 30% !important;
+  }
+}
+
+@mixin force20PercentOfTheScreen {
+  @media (min-width: 2561px) {
+    width: 20% !important;
+  }
+}
+
+$fixedWidthFullHeight: 400px;
+$fixedWidthFixedHeight: 500px;
+$fixedWidthFixedHeightSmall: 250px;
+$borderStyle: 6px solid rgba(8, 35, 70, .4);

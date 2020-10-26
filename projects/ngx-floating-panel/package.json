@@ -1,9 +1,11 @@
 {
-  "name": "ngx-floating-panel",
-  "version": "0.0.1",
+  "name": "@vlah.io/ngx-floating-panel",
+  "version": "4.0.1",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
-    "@angular/core": "^10.2.0"
+    "@angular/core": "^10.2.0",
+    "@vlah.io/ngx-worker": "^0.4.1",
+    "subsink": "^1.0.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"

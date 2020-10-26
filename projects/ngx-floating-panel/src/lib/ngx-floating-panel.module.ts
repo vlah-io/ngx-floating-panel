@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
-import { NgxFloatingPanelComponent } from './ngx-floating-panel.component';
-
-
+import {NgModule} from '@angular/core';
+import {FloatingPanelComponent} from './component/floating-panel.component';
 
 @NgModule({
-  declarations: [NgxFloatingPanelComponent],
-  imports: [
+  imports: [],
+  declarations: [
+    FloatingPanelComponent
   ],
-  exports: [NgxFloatingPanelComponent]
+  exports: [
+    FloatingPanelComponent
+  ]
 })
-export class NgxFloatingPanelModule { }
+export class NgxFloatingPanelModule {
+
+}
